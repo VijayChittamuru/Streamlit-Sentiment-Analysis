@@ -6,7 +6,7 @@ import nltk
 
 
 try:
-    nltk.data.find('corpora/wordnet')
+    nltk.data.find('corpora/wordnet.zip')
 except LookupError:
     print("Downloading necessary nltk data")
     nltk.download('wordnet')

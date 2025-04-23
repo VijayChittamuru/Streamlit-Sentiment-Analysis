@@ -2,6 +2,9 @@ import streamlit as st
 from textblob import TextBlob
 from nltk.stem.wordnet import WordNetLemmatizer
 import re
+import nltk
+
+nltk.download('wordnet')
 
 # Taken from assignment guidelines
 def clean_text(text):

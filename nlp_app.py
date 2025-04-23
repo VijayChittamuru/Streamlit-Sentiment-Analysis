@@ -4,7 +4,14 @@ from nltk.stem.wordnet import WordNetLemmatizer
 import re
 import nltk
 
-nltk.download('wordnet')
+
+try:
+    nltk.data.find('corpora/wordnet')
+except LookupError:
+    print("Downloading necessary nltk data")
+    nltk.download('wordnet')
+except Exception as e:
+    st.error("An unexpected error occurred")
 
 # Taken from assignment guidelines
 def clean_text(text):
